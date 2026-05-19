@@ -1,5 +1,5 @@
 <?php
-// File: app/Services/WeatherService.php
+
 
 namespace App\Services;
 

@@ -1,4 +1,3 @@
-{{-- File: resources/views/admin/crops/edit.blade.php --}}
 @extends('layouts.app')
 @section('title', 'Edit Crop')
 

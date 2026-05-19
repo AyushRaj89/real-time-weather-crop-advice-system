@@ -1,5 +1,5 @@
-    <?php
-// File: app/Http/Controllers/WeatherController.php
+<?php
+
 
 namespace App\Http\Controllers;
 

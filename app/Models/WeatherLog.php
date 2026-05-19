@@ -1,5 +1,5 @@
 <?php
-// File: app/Models/WeatherLog.php
+
 
 namespace App\Models;
 

@@ -1,4 +1,4 @@
-{{-- File: resources/views/admin/crops/index.blade.php --}}
+
 @extends('layouts.app')
 @section('title', 'Manage Crops')
 

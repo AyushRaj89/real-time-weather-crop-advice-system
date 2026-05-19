@@ -1,4 +1,4 @@
-{{-- File: resources/views/admin/rules/index.blade.php --}}
+
 @extends('layouts.app')
 @section('title', 'Crop Rules')
 

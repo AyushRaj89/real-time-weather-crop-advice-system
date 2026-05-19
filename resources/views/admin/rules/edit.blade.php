@@ -1,4 +1,4 @@
-{{-- File: resources/views/admin/rules/edit.blade.php --}}
+
 @extends('layouts.app')
 @section('title', 'Edit Rule')
 

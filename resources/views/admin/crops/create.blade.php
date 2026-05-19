@@ -1,4 +1,4 @@
-{{-- File: resources/views/admin/crops/create.blade.php --}}
+
 @extends('layouts.app')
 @section('title', 'Add Crop')
 
