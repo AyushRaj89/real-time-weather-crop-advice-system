@@ -46,6 +46,22 @@ class User extends Authenticatable
         return $this->hasOne(WeatherLog::class)->latestOfMany();
     }
 
+    /**
+     * A user has many crop plans.
+     */
+    public function cropPlans()
+    {
+        return $this->hasMany(CropPlan::class);
+    }
+
+    /**
+     * A user has many irrigation logs.
+     */
+    public function irrigationLogs()
+    {
+        return $this->hasMany(IrrigationLog::class);
+    }
+
     public function isAdmin(): bool
     {
         return $this->is_admin === true;

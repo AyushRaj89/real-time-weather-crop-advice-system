@@ -4,6 +4,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\CropRuleController;
 use App\Http\Controllers\WeatherController;
+use App\Http\Controllers\CropPlannerController;
+use App\Http\Controllers\IrrigationTrackerController;
 
 // ─── Public routes ────────────────────────────────────────────────────────────
 
@@ -29,6 +31,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::post('/dashboard/city', [DashboardController::class, 'saveCity'])->name('dashboard.city');
 
+    // Farmer routes
+    Route::prefix('farmer')->name('farmer.')->group(function () {
+        Route::get('/planner', [CropPlannerController::class, 'index'])->name('planner.index');
+        Route::post('/planner', [CropPlannerController::class, 'store'])->name('planner.store');
+        Route::patch('/planner/{plan}', [CropPlannerController::class, 'updateStatus'])->name('planner.status');
+        Route::put('/planner/{plan}', [CropPlannerController::class, 'update'])->name('planner.update');
+        Route::delete('/planner/{plan}', [CropPlannerController::class, 'destroy'])->name('planner.destroy');
+
+        Route::get('/irrigation', [IrrigationTrackerController::class, 'index'])->name('irrigation.index');
+        Route::post('/irrigation', [IrrigationTrackerController::class, 'store'])->name('irrigation.store');
+        Route::delete('/irrigation/{log}', [IrrigationTrackerController::class, 'destroy'])->name('irrigation.destroy');
+    });
 
     // Weather API endpoints
     Route::prefix('weather')->name('weather.')->group(function () {

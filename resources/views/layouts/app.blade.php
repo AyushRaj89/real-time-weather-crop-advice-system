@@ -446,6 +446,24 @@
                 <i data-lucide="layout-dashboard"></i> Dashboard
             </a>
         </li>
+        <li>
+            <a href="{{ route('farmer.planner.index') }}"
+               class="nav-link {{ request()->routeIs('farmer.planner.*') ? 'active' : '' }}">
+                <i data-lucide="sprout"></i> Crop Planner
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('farmer.irrigation.index') }}"
+               class="nav-link {{ request()->routeIs('farmer.irrigation.*') ? 'active' : '' }}">
+                <i data-lucide="droplets"></i> Irrigation Tracker
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('weather.history') }}"
+               class="nav-link {{ request()->routeIs('weather.*') ? 'active' : '' }}">
+                <i data-lucide="cloud-rain"></i> Weather History
+            </a>
+        </li>
         @if(auth()->user()->isAdmin())
         <li>
             <a href="{{ route('admin.crops.index') }}"

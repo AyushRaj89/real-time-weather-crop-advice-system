@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name'         => 'Admin User',
                 'password'     => Hash::make('password'),
-                'default_city' => 'London',
+                'default_city' => 'Punjab',
                 'is_admin'     => true,
             ]
         );

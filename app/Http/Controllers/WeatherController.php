@@ -113,7 +113,7 @@ class WeatherController extends Controller
             ->orderByDesc('fetched_at')
             ->paginate(20);
 
-        return view('weather.history', compact('logs'));
+        return view('farmer.weather.history', compact('logs'));
     }
 
     /**
